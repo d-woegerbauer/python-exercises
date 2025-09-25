@@ -47,8 +47,27 @@ def print_fizz_buzz(max_number):
         else:
             print(i)
 
-#Aufgabe 6
+#Aufgabe aus Unterricht
 colors = [ "Rot", "Blau", "Grün", "Gelb", "Lila", "Orange", "Pink", "Braun", "Schwarz", "Weiss"]
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-print(colors[-4:-1:])
+
+#Aufgabe 6/7/8
+punkte = [
+    ["Fabian", 5, 6, 7],
+    ["Marco", 3, 5, 2],
+    ["Mara", 5, 5, 6],
+    ["Elena", 3, 2, 7]]
+
+def punkte_liste(punkt_liste):
+    average_sum = 0
+
+    for punkt in punkt_liste:
+        sum = punkt[1] + punkt[2] + punkt[3]
+        mark = sum*5/20+1
+        print(f"Name: {punkt[0]}\nSumme: {sum}\nNote: {mark}\n-------------------")
+        average_sum += mark
+
+    print(f"Der Notendurchschnitt beträgt {average_sum/len(punkt_liste)}")
+
+punkte_liste(punkte)
